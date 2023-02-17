@@ -14,11 +14,13 @@ def find_mismatch(text):
     for i, next in enumerate(text):
         if next in "([{":
             # Process opening bracket, write your code here
+            pass
             opening_brackets_stack.append(Bracket(next,i+1))
             
 
         if next in ")]}":
             # Process closing bracket, write your code here
+            pass
             if len(opening_brackets_stack) == 0 or not are_matching (opening_brackets_stack[-1].char, next):
                 return i+1
             opening_brackets_stack.pop()
@@ -31,6 +33,7 @@ def find_mismatch(text):
 
 
 def main():
+    text = input()
     izvele = input("Ievadiet F vai I: ")
     if izvele == "F":
         fails = input("Ievadiet faila nosaukumu: ")
