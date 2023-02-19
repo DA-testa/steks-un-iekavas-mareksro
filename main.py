@@ -33,25 +33,14 @@ def find_mismatch(text):
 
 
 def main():
-    text = input()
-    mismatch = find_mismatch(text)
-    izvele = input("Ievadiet F vai I: ")
-    
-    if izvele == "F":
-        fails = input("Ievadiet faila nosaukumu: ")
-        with open(fails, "r") as f:
-            text = f.read().strip()
-            mismatch = find_mismatch(text)
-            print(mismatch)  
-            
-    elif izvele == "I":
-        text = input("Ievadiet iekavas: ")
+    izvele = input()
+    if izvele == "I"
+        text = input()
         mismatch = find_mismatch(text)
         print(mismatch)
         
     # Printing answer, write your code here
    
-
 
 if __name__ == "__main__":
     main()
