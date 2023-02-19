@@ -16,7 +16,6 @@ def find_mismatch(text):
             # Process opening bracket, write your code here
             pass
             opening_brackets_stack.append(Bracket(next,i+1))
-            
 
         if next in ")]}":
             # Process closing bracket, write your code here
@@ -38,7 +37,7 @@ def main():
     if izvele == "F":
         fails = input("Ievadiet faila nosaukumu: ")
         with open(fails, "r") as f:
-            text = f.read()
+            text = f.read().strip()
             mismatch = find_mismatch(text)
             print(mismatch)  
     elif izvele == "I":
@@ -48,10 +47,7 @@ def main():
     else:
         print("Nepareiza izvele")
         
-    
     # Printing answer, write your code here
    
-
-
 if __name__ == "__main__":
     main()
