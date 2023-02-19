@@ -21,7 +21,7 @@ def find_mismatch(text):
         if next in ")]}":
             # Process closing bracket, write your code here
             pass
-            if not opening_brackets_stack or not are_matching(opening_brackets_stack[-1].char, next):
+            if len(opening_brackets_stack) == 0 or not are_matching(opening_brackets_stack[-1].char, next):
                 return i+1
             opening_brackets_stack.pop()
             
@@ -41,12 +41,14 @@ def main():
             text = f.read().strip()
     elif izvele == "I":
         text = input("Ievadiet iekavas: ")
+        mismatch = find_mismatch(text)
+        print(mismatch)
     else:
         print("Invalid choice")
         return
-    mismatch = find_mismatch(text)
+    
     # Printing answer, write your code here
-    print(mismatch)
+   
 
 
 if __name__ == "__main__":
