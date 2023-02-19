@@ -32,8 +32,6 @@ def find_mismatch(text):
 
 
 def main():
-    text = input()
-    mismatch = find_mismatch(text)
     izvele = input("Ievadiet F vai I: ")
     if izvele == "F":
         fails = input("Ievadiet faila nosaukumu: ")
