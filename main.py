@@ -38,14 +38,16 @@ def main():
     if izvele == "F":
         fails = input("Ievadiet faila nosaukumu: ")
         with open(fails, "r") as f:
-            text = f.read().strip()
+            text = f.read()
+            mismatch = find_mismatch(text)
+            print(mismatch)  
     elif izvele == "I":
         text = input("Ievadiet iekavas: ")
         mismatch = find_mismatch(text)
         print(mismatch)
     else:
-        print("Invalid choice")
-        return
+        print("Nepareiza izvele")
+        
     
     # Printing answer, write your code here
    
