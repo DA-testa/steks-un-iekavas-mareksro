@@ -33,6 +33,7 @@ def find_mismatch(text):
 
 def main():
     text = input()
+    mismatch = find_mismatch(text)
     izvele = input("Ievadiet F vai I: ")
     if izvele == "F":
         fails = input("Ievadiet faila nosaukumu: ")
@@ -50,5 +51,7 @@ def main():
         
     # Printing answer, write your code here
    
+
+
 if __name__ == "__main__":
     main()
