@@ -34,7 +34,7 @@ def find_mismatch(text):
 
 def main():
     izvele = input()
-    if izvele == "I"
+    if izvele == "I":
         text = input()
         mismatch = find_mismatch(text)
         print(mismatch)
