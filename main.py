@@ -31,15 +31,15 @@ def find_mismatch(text):
 def main():
     text = input()
     mismatch = find_mismatch(text)
-    izvele = input("Ievadiet F vai I: ")
+    izvele = input("Ievadiet F vai I:\n")
     if izvele == "F":
-        fails = input("Ievadiet faila nosaukumu: ")
+        fails = input("Ievadiet faila nosaukumu:\n")
         with open(fails, "r") as f:
             text = f.read().strip()
             mismatch = find_mismatch(text)
             print(mismatch)  
     elif izvele == "I":
-        text = input("Ievadiet iekavas: ")
+        text = input("Ievadiet iekavas:\n")
         mismatch = find_mismatch(text)
         print(mismatch)
         
