@@ -45,9 +45,6 @@ def main():
         text = input("Ievadiet iekavas: ")
         mismatch = find_mismatch(text)
         print(mismatch)
-    else:
-        print("Nepareiza izvele.")
-        return
         
     # Printing answer, write your code here
    
