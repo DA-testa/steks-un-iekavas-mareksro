@@ -12,35 +12,41 @@ def are_matching(left, right):
 
 def find_mismatch(text):
     opening_brackets_stack = []
-    for i, next in enumerate(text):        
+    for i, next in enumerate(text):
         if next in "([{":
-            
+            # Process opening bracket, write your code here
             pass
             opening_brackets_stack.append(Bracket(next,i+1))
-           
+            
 
         if next in ")]}":
-            
+            # Process closing bracket, write your code here
             pass
-            if len(opening_brackets_stack) == 0 or not are_matching(opening_brackets_stack[-1].char, next):               
-                return i+1            
+            if len(opening_brackets_stack) == 0 or not are_matching (opening_brackets_stack[-1].char, next):
+                return i+1
             opening_brackets_stack.pop()
             
     if opening_brackets_stack:
-        return opening_brackets_stack[0].position
+        return opening_brackets_stack[-1].position
     return "Success"
 
 
-
 def main():
-    izvele = input()
-    if izvele == "I":
-        text = input()
-        mismatch = find_mismatch(text)
-        print(mismatch)
-        
-    # Printing answer, write your code here
-   
+    text = input()
+    text = ("Ievadiet F vai I:\n")
+    #izvele = input()
+    #if izvele == "F":
+        #fails = input("Ievadiet faila nosaukumu:\n")
+        #with open(fails, "r") as f:
+            #text = f.read().strip()
+    #elif izvele == "I":
+       # text = input("Ievadiet iekavas:\n ")
+    mismatch = find_mismatch(text)
+    print(mismatch)
+    #else:
+       #print("Invalid choice\n")
+        #return
+    
 
 if __name__ == "__main__":
     main()
